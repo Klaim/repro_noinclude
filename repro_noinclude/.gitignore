@@ -1,0 +1,5 @@
+repro_noinclude
+
+# Testscript output directory (can be symlink).
+#
+test-repro_noinclude

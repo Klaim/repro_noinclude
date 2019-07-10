@@ -1,0 +1,11 @@
+libs =
+#import libs += libhello%lib{hello}
+
+include_dir = $src_root/upstream/include
+src_dir = $src_root/upstream/src
+
+
+exe{repro_noinclude}: {hxx ixx txx cxx}{**}  $src_dir/cxx{**} $include_dir/hxx{**} $libs testscript
+
+cxx.poptions =+ "-I$out_root" "-I$src_root" "-I$include_dir"
+
